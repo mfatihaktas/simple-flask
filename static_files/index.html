@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Infrastructure Engineer</title>
+</head>
+<body>
+    <h2>Provide a png, jpg or jpeg:</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image_file">
+        <input type="submit" value="Upload">
+    </form>
+    {% if img1_path %}
+    <img src="{{ img1_path }}" alt="Rectangle 1">
+    {% endif %}
+    {% if img2_path %}
+    <img src="{{ img2_path }}" alt="Rectangle 2">
+    {% endif %}
+    {% if confusion_matrix %}
+    <p id="text"> Confusion matrix: {{ confusion_matrix }}</p>
+    {% endif %}
+    {% if perc_overlap %}
+    <p id="text"> Overlap (%): {{ perc_overlap }}</p>
+    {% endif %}
+</body>
+</html>
